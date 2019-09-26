@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/design/style.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="header__logo" title="">
+            <img src="/design/images/logo.svg" width="30" alt="">
+        </a>
+        <div class="header__menu">
+            <a href="https://github.com/dendidev">
+                <img src="/design/images/user.svg" width="30" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- Основной контент -->
+    <main>
+        <div class="main__title-wrapper">
+            <h1 class="main__title">Hey, Barbara</h1>
+            <h2 class="main__subtitle">Main focus for today ?</h2>
+        </div>
+        <!-- Если задач нету -->
+        <div class="main__start">
+            <h2 class="main__start_text">You haven't tasks</h2>
+            <a href="#" id="addOpen" class="main__start_button">Let's create</a>
+        </div>
+        <!-- Если задачи есть -->
+        <div class="tasks" id="tasks">
+            <div class="list__title">
+                <h2 class="list__title_text">Your plan for today</h2>
+                <h4 class="list__title_count">You have <span class="task__count-dones"></span> done of <span class="task__count"></span></h4>
+            </div>
+        </div>
+    </main>
+    <div class="add__newTask_button-wrapper">
+        <button class="add__newTask_button" id="addOpen">+</button>
+    </div>
+    <!-- Блок добавление задачи -->
+    <div class="add-wrapper">
+        <div class="add">
+            <div class="add__header">
+                <h4 class="add__title">Add new task</h4>
+                <span class="add__close" id="addClose"></span>
+            </div>
+            <label name="addInput">Name of task</label>
+            <input type="text" class="add__input" placeholder="Type here" required>
+            <div class="add__option">
+                <label name="addTime">Indicate time</label>
+                <input type="time" class="add__time" value="00:00" required>
+                <button class="add__button" type="button">Add</button>
+            </div>
+        </div>
+    </div>
+<!-- JavaScripts -->
+
+<script src="/index.js"></script>
+</body>
+</html>
